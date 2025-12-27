@@ -2,42 +2,217 @@
 
 ## Overview
 
-This assignment focuses on elevating your HTML5 skills by working with advanced content elements and mastering the creation, structure, and validation of web forms. You will practice using lists, tables, and media to enrich page content, and then dive deep into building dynamic, user-friendly forms powered by native HTML5 features.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Enhanced HTML5 Content and Forms Assignment">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Forms</title>
 
-## Objectives
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
 
-You are expected to demonstrate the ability to:
+        header, section, footer {
+            margin-bottom: 30px;
+        }
 
-* Use lists and tables effectively to organize content for clarity and accessibility.
-* Embed media content such as images, audio, or video using semantic HTML5 elements.
-* Build structured HTML5 forms that are both usable and visually intuitive.
-* Apply various HTML5 form attributes to improve user interaction.
-* Use built-in validation techniques to minimize incorrect data input without relying on JavaScript.
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-## Instructions
+        table, th, td {
+            border: 1px solid #333;
+        }
 
-Design a simple multi-section web page that showcases the use of lists, tables, and media, followed by a complete HTML5 form. The page should reflect thoughtful structure, usability, and clarity.
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
 
-Your form should include various input types, make use of labels and fieldsets for accessibility, and apply HTML5 validation rules through attributes like `required`, `type`, `minlength`, `pattern`, and others.
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+        }
 
-Avoid using JavaScript for validation—rely solely on native HTML5 capabilities.
+        legend {
+            font-weight: bold;
+        }
 
-## Deliverables
+        label {
+            display: block;
+            margin-top: 10px;
+        }
 
-Submit a single HTML file named `enhanced-form.html`. It should include:
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
 
-* Well-structured content using lists, tables, and media.
-* A complete HTML5 form including a variety of input fields.
-* Correct use of form attributes such as `placeholder`, `required`, `autocomplete`, and `readonly`.
-* HTML5 validation features implemented correctly across all relevant fields.
-* A clear, accessible layout using semantic tags.
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
 
-## Tips
+<body>
 
-* Proper and meaningful use of lists, tables, and media.
-* Clarity and accessibility of form structure.
-* Correct use of form elements and attributes.
-* Effective application of native HTML5 validation.
-* Clean, well-indented, and maintainable HTML code.
+<header>
+    <h1>Enhancing HTML5 Content & Mastering Forms</h1>
+    <p>This page demonstrates advanced HTML5 content elements and a fully validated HTML5 form.</p>
+</header>
 
+<!-- SECTION: LISTS -->
+<section>
+    <h2>Popular Web Technologies</h2>
 
+    <h3>Frontend Technologies</h3>
+    <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h3>Backend Technologies</h3>
+    <ol>
+        <li>Node.js</li>
+        <li>Python</li>
+        <li>PHP</li>
+    </ol>
+</section>
+
+<!-- SECTION: TABLE -->
+<section>
+    <h2>Course Schedule</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Topic</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>HTML5 Basics</td>
+                <td>2 Hours</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Forms & Validation</td>
+                <td>3 Hours</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Media & Tables</td>
+                <td>2 Hours</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- SECTION: MEDIA -->
+<section>
+    <h2>Embedded Media</h2>
+
+    <figure>
+        <img src="https://via.placeholder.com/600x300" alt="Sample placeholder image">
+        <figcaption>Sample Image Embedded Using HTML5</figcaption>
+    </figure>
+
+    <h3>Sample Audio</h3>
+    <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h3>Sample Video</h3>
+    <video controls width="400">
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+</section>
+
+<!-- SECTION: FORM -->
+<section>
+    <h2>User Registration Form</h2>
+
+    <form action="#" method="post" autocomplete="on">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname"
+                   placeholder="Enter your full name"
+                   required minlength="3">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="example@email.com"
+                   required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="0712345678"
+                   pattern="[0-9]{10}"
+                   required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Account Details</legend>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username"
+                   required minlength="5">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"
+                   required minlength="8">
+
+            <label for="accountType">Account Type</label>
+            <select id="accountType" name="accountType" required>
+                <option value="">-- Select --</option>
+                <option value="student">Student</option>
+                <option value="professional">Professional</option>
+                <option value="admin">Administrator</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="bio">Short Bio</label>
+            <textarea id="bio" name="bio"
+                      placeholder="Tell us about yourself"
+                      minlength="10"></textarea>
+
+            <label>
+                <input type="checkbox" name="terms" required>
+                I agree to the terms and conditions
+            </label>
+        </fieldset>
+
+        <button type="submit">Submit Form</button>
+
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 HTML5 Assignment. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
